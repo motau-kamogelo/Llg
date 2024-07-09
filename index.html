@@ -25,24 +25,20 @@
             overflow: hidden;
             padding: 20px;
         }
-        header {
+        
+        nav {
+            margin-top: 60px; /* Adjusted margin for fixed header */
+        
             background-color: #fff;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             padding: 10px 0;
             text-align: center;
+            position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
             transition: background-color 0.3s ease;
-        }
-        header img {
-            max-width: 150px;
-            height: auto;
-        }
-        nav {
-            margin-top: 60px; /* Adjusted margin for fixed header */
-            position: fixed;
-        }
+       }
         nav ul {
             list-style-type: none;
             text-align: center;
@@ -120,11 +116,6 @@
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <img src="https://source.unsplash.com/150x150/?chicken" alt="Lehe la Gauta Logo">
-        </div>
-    </header>
     <nav>
         <div class="container">
             <ul>
