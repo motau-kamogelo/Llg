@@ -34,10 +34,14 @@
             width: 100%;
             top: 0;
             z-index: 1000;
+            transition: background-color 0.3s ease;
         }
         header img {
             max-width: 150px;
             height: auto;
+        }
+        nav {
+            margin-top: 60px; /* Adjusted margin for fixed header */
         }
         nav ul {
             list-style-type: none;
@@ -159,4 +163,37 @@
                 <p>Get in touch with us to place an order or inquire about our products.</p>
                 <p>Email: info@lehelagauta.com<br>
                    Phone: +123 456 7890</p>
-                <p>A
+                <p>Address: [Your Farm Address]</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Lehe la Gauta. All rights reserved.</p>
+            <p>Connect with us on social media:
+                <a href="#" target="_blank">Facebook</a> |
+                <a href="#" target="_blank">Instagram</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Smooth Scroll Script -->
+    <script>
+        // Smooth scrolling using vanilla JavaScript
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                const sectionId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(sectionId);
+
+                window.scrollTo({
+                    top: targetSection.offsetTop - 60, // Adjusted for fixed header height
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Update navigation bar background on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.query
